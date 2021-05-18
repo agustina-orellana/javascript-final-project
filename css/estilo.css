@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F2F4F4 ;
+}
+/**************** ENCABEZADO DE PAGINA *****************/
+.header-bg{
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    padding-left: 2rem;
+    padding-top: 1rem;
+    
+    
+}
+
+.header-bg p {
+    color:black;
+    font-family: Georgia;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+.header-bg h1 {
+    color:black;
+    font-family: Georgia;
+    font-size: 3rem;
+}
+/***************** CARD *********************/
+ 
+.card:hover{
+    transform: scale(1.01,1.01);
+    box-shadow: 10px 10px 20px grey;
+} 
+.row{
+    margin: 3.125rem 0;
+    padding-bottom: 1.25rem;
+    background-color: #e1e6e6;
+
+}
+.card-link-section{
+text-decoration: none;
+}
+
+
+/************ SECTION *************/
+.card-section{
+    padding-top: 1.25rem;
+    text-align: center;
+    color: #000;
+    font-family:Georgia;
+    border-bottom: 1px solid black;
+}
+
+@media screen and (max-width:768px) {
+    #carouselExampleControls{
+        display: none;
+    }
+
+}
+ 
+    
+
+
+
