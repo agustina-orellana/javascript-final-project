@@ -1,37 +1,79 @@
-let productos = [];
+let products = [];
 class Clothes {
-    constructor(genero, tipo, precio, talle, marca){
-        this.genero = genero;
-        this.tipo = tipo;
-        this.precio = precio;
-        this.talle = talle;
-        this.marca = marca;
+    constructor( title, genere, type, price, size, brand, img){
+        this.title = title;
+        this.genere = genere;
+        this.type = type;
+        this.price = price;
+        this.size = size;
+        this.brand = brand;
+        this.img = img;
     }
 };
 
 class Shoes {
-    constructor(genero, precio, talle, marca){
-        this.genero = genero;
-        this.precio = precio;
-        this.talle = talle;
-        this.marca = marca;
+    constructor( title, genere, price, size, brand, img){
+        this.title = title;
+        this.genere = genere;
+        this.price = price;
+        this.size = size;
+        this.brand = brand;
+        this.img = img;
     }
 };
+let buzo = new Clothes('buzo', 'mujer', 'top', 8000, 'l', 'nike', 'https://res.cloudinary.com/dooiy35ve/image/upload/v1619996496/Sport%20House/NI_CJ3115-100-1_ixidnh.jpg' );
+products.push(buzo);
 
-let remera = new Clothes('mujer','top', 3500, 'xl', 'nike');
-productos.push(remera);
+let remera = new Clothes('remera', 'mujer', 'top', 3500, 'xl', 'nike', 'https://res.cloudinary.com/dooiy35ve/image/upload/v1619996513/Sport%20House/remera-mujer_laohet.jpg');
+products.push(remera);
 
-let pantalon = new Clothes('hombre', 'bottom', 4500, 'm', 'adidas');
-productos.push(pantalon);
+let pantalon = new Clothes('pantalon', 'hombre', 'bottom', 4500, 'm', 'adidas', 'https://res.cloudinary.com/dooiy35ve/image/upload/v1619996507/Sport%20House/pantalon-h_yopz45.jpg');
+products.push(pantalon);
 
-let zapatilla = new Shoes('infantil', 6000, 23, 'reebok');
-productos.push(zapatilla);
+let zapatilla = new Shoes('zapatilla', 'infantil', 6000, 23, 'reebok', 'https://res.cloudinary.com/dooiy35ve/image/upload/v1619996542/Sport%20House/Zapatilla-nikeM_pnwgs5.jpg');
+products.push(zapatilla);
 
-let sandalias = new Shoes('mujer', 8000, 39, 'sarkany');
-productos.push(sandalias);
+let sandalias = new Shoes('sandalia', 'mujer', 8000, 39, 'sarkany', 'https://res.cloudinary.com/dooiy35ve/image/upload/v1619996533/Sport%20House/zapatilla-adidas-ni%C3%B1a_ltgffp.jpg');
+products.push(sandalias);
+
+let aux =``;
+for(let i = 0; i < products.length; i++){
+    aux += `<div class="card">
+    <img src=${products[i].img}>
+    <div class="card-body">
+        <h5 class="card-title">${products[i].title} ${products[i].brand}</h5>
+        <p class="card-text">$${products[i].price}</p>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Añadir al carrito
+        </button>
+        </div>
+     </div>
+    `; 
+    document.getElementById("card").innerHTML = aux;
+};
 
 
-let saludo = prompt('Hola, por favor dinos tu nombre');
-alert('Bienvenido/a ' + saludo + ' a Sport House');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let saludo = prompt('Hola, por favor dinos tu nombre');
+// alert('Bienvenido/a ' + saludo + ' a Sport House');
 
 
