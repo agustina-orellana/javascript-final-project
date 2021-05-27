@@ -1,4 +1,6 @@
+let carrito = [];
 let products = [];
+
 class Clothes {
     constructor( title, genere, type, price, size, brand, img){
         this.title = title;
@@ -43,18 +45,33 @@ for(let i = 0; i < products.length; i++){
     <div class="card-body">
         <h5 class="card-title">${products[i].title} ${products[i].brand}</h5>
         <p class="card-text">$${products[i].price}</p>
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
-            Añadir al carrito
+        <button type="button" class="btn btn-danger" onclick='addToCart(${JSON.stringify(products[i])})'>
+        Añadir al carrito
+        </button>
+        <button type="button" class="btn btn-dark" onclick='removeItem(${JSON.stringify(products[i])})'>
+         Eliminar 
         </button>
         </div>
-     </div>
+    </div>
     `; 
     document.getElementById("card").innerHTML = aux;
 };
+ 
+console.log(carrito);
 
+function addToCart(product){
+    carrito.push(product);
+    console.log(carrito);
+};
 
+function removeItem(product){
+    carrito = carrito.filter(item => item.title !== product.title);
+    console.log(carrito);   
+};
 
+function emptyCart(){
+    carrito = [];
+};
 
 
 
