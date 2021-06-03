@@ -56,41 +56,18 @@ for(let i = 0; i < products.length; i++){
     `; 
     document.getElementById("card").innerHTML = aux;
 };
- 
-console.log(carrito);
 
-function addToCart(product){
+function addToCart (product){
     carrito.push(product);
-    console.log(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 function removeItem(product){
     carrito = carrito.filter(item => item.title !== product.title);
-    console.log(carrito);   
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 
 function emptyCart(){
     carrito = [];
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let saludo = prompt('Hola, por favor dinos tu nombre');
-// alert('Bienvenido/a ' + saludo + ' a Sport House');
-
-
