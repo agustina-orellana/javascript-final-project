@@ -48,13 +48,16 @@ for(let i = 0; i < products.length; i++){
         <button type="button" class="btn btn-danger" onclick='addToCart(${JSON.stringify(products[i])})'>
         Añadir al carrito
         </button>
-        <button type="button" class="btn btn-dark" onclick='removeItem(${JSON.stringify(products[i])})'>
+        <button type="button" id="btn1" class="btn btn-dark" onclick='removeItem(${JSON.stringify(products[i])})'>
          Eliminar 
         </button>
         </div>
     </div>
     `; 
-    document.getElementById("card").innerHTML = aux;
+    //document.getElementById("card").innerHTML = aux;
+
+    // jquery //
+    $("#card").html(aux);
 };
 
 function addToCart (product){
