@@ -1,6 +1,7 @@
 let carrito = [];
 let products = [];
 
+
 class Clothes {
     constructor( title, genere, type, price, size, brand, img){
         this.title = title;
@@ -40,7 +41,7 @@ products.push(sandalias);
 
 let aux =``;
 for(let i = 0; i < products.length; i++){
-    aux += `<div class="card">
+    aux += `<div class="card col-lg-3" style="margin: 2rem;">
     <img src=${products[i].img}>
     <div class="card-body">
         <h5 class="card-title">${products[i].title} ${products[i].brand}</h5>
@@ -58,11 +59,75 @@ for(let i = 0; i < products.length; i++){
 
     // jquery //
     $("#card").html(aux);
+
 };
+
+let dataMujer = [] ;
+$.get('json/datamujer.json', function(res, rejected){
+    for(let i = 0; i < res.length; i++){
+        dataMujer.push(res[i])
+    }
+
+    let auxMujer = ``;
+    for(let i = 0; i < dataMujer.length; i++){
+        auxMujer += `<div class="card col-lg-3" style="margin: 2rem;">
+        <img src=${dataMujer[i].img}>
+        <div class="card-body">
+            <h5 class="card-title">${dataMujer[i].title} ${dataMujer[i].brand}</h5>
+            <p class="card-text">$${dataMujer[i].price}</p>
+            <button type="button" class="btn btn-danger" onclick='addToCart(${JSON.stringify(dataMujer[i])})'>
+            Añadir al carrito
+            </button>
+            <button type="button" id="btn1" class="btn btn-dark" onclick='removeItem(${JSON.stringify(dataMujer[i])})'>
+            Eliminar 
+            </button>
+            </div>
+        </div>
+        `;
+
+        $("#card-women").html(auxMujer);
+    }
+
+});
+let dataHombre = [] ;
+$.get('json/datahombre.json', function(res, rejected){
+    for(let i = 0; i < res.length; i++){
+        dataHombre.push(res[i])
+    }
+
+    let auxHombre = ``;
+    for(let i = 0; i < dataHombre.length; i++){
+        auxHombre += `<div class="card col-lg-3" style="margin: 2rem;">
+        <img src=${dataHombre[i].img}>
+        <div class="card-body">
+            <h5 class="card-title">${dataHombre[i].title} ${dataHombre[i].brand}</h5>
+            <p class="card-text">$${dataHombre[i].price}</p>
+            <button type="button" class="btn btn-danger" onclick='addToCart(${JSON.stringify(dataHombre[i])})'>
+            Añadir al carrito
+            </button>
+            <button type="button" id="btn1" class="btn btn-dark" onclick='removeItem(${JSON.stringify(dataHombre[i])})'>
+            Eliminar 
+            </button>
+            </div>
+        </div>
+        `;
+
+        $("#card-men").html(auxHombre);
+    }
+
+});
+
+
+
+
+
 
 function addToCart (product){
     carrito.push(product);
     localStorage.setItem("carrito", JSON.stringify(carrito));
+    console.log(carrito)
+    $("#numero").html(`<h5>${carrito.length}</h5>`)
+
 };
 
 function removeItem(product){
@@ -74,3 +139,4 @@ function emptyCart(){
     carrito = [];
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+ 

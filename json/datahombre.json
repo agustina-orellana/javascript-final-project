@@ -1,0 +1,37 @@
+[   {
+    "title": "Remera",
+    "genere": "hombre",
+    "type":"top",
+    "price": 5500,
+    "size":"l",
+    "brand":"reebok",
+    "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1620100367/Sport%20House/remera-hombre.._h0bcz8.jpg"
+    },
+    {
+        "title": "Campera",
+        "genere": "hombre",
+        "type":"top",
+        "price": 8000,
+        "size":"xl",
+        "brand":"puma",
+        "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1620100555/Sport%20House/campera-hombre.._ipr7ba.jpg"
+    },
+    {
+        "title": "Short",
+        "genere": "hombre",
+        "type":"bottom",
+        "price": 3800,
+        "size":"m",
+        "brand":"nike",
+        "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1620100366/Sport%20House/short-h_b3z3v8.jpg"
+    },
+    {
+        "title": "Pantalon",
+        "genere": "hombre",
+        "type":"bottom",
+        "price": 7500,
+        "size":"xs",
+        "brand":"adidas",
+        "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1620100542/Sport%20House/pantalon-hombre_zwekpz.jpg"
+    }
+]

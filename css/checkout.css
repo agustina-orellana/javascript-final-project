@@ -1,0 +1,22 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+ #compras{
+    margin: 1rem;
+    padding: 1rem;
+    list-style: none;
+    color:black;
+    background-color: white;
+};
+#total{
+margin: 1rem;
+padding: 1rem;
+list-style: none;
+
+}
+ #img-card{
+     width: 20%;
+     height: 20%;
+ }

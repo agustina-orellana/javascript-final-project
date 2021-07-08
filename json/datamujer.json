@@ -1,0 +1,57 @@
+[ 
+    {
+        "title": "Buzo",
+        "genere": "mujer",
+        "type":"top",
+        "price": 8000,
+        "size":"l",
+        "brand":"nike",
+        "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1619996496/Sport%20House/NI_CJ3115-100-1_ixidnh.jpg"
+    },
+    {
+        "title": "Remera",
+        "genere": "mujer",
+        "price": 3500,
+        "type":"top",
+        "size":"xl",
+        "brand":"nike",
+        "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1619996513/Sport%20House/remera-mujer_laohet.jpg"
+
+    },
+    {
+        "title": "Zapatilla",
+        "genere": "mujer",
+        "price": 8000,
+        "type":"bottom",
+        "size":39,
+        "brand": "adidas",
+        "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1619996533/Sport%20House/zapatilla-adidas-ni%C3%B1a_ltgffp.jpg"
+    },
+    {
+        "title": "Remera",
+        "genere": "mujer",
+        "price": 4000,
+        "type":"top",
+        "size":"m",
+        "brand": "puma",
+        "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1619996510/Sport%20House/remera-m_hfhd5z.jpg"
+    },
+    {
+        "title": "Campera",
+        "genere": "mujer",
+        "price": 10000,
+        "type":"top",
+        "size":"xs",
+        "brand": "nike",
+        "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1620106867/Sport%20House/CAMPERA-NIKE-M_hpfu4x.jpg"
+    },
+    {
+        "title": "Pollera",
+        "genere": "mujer",
+        "price": 3700,
+        "type":"bottom",
+        "size":"m",
+        "brand": "nike",
+        "img":"https://res.cloudinary.com/dooiy35ve/image/upload/v1620106833/Sport%20House/POLLERA-N-MUJER_fbsfrq.jpg"
+    }
+]
